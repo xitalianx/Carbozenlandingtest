@@ -13,12 +13,16 @@
 
     --foreground: 220 15% 15%;
 
-    --primary: 210 100% 45%;
-    --secondary: 330 95% 55%;
-    --tertiary: 70 95% 45%;
+    /* Colori primari più saturi per titoli e bottoni neon */
+    --primary: 210 100% 55%;
+    --secondary: 330 95% 65%;
+    --tertiary: 70 95% 55%;
 
     --border: 0 0% 80%;
     --radius: 0.75rem;
+
+    /* Accent usato per pulse */
+    --accent: 330 95% 65%;
   }
 }
 
@@ -49,19 +53,26 @@
 /* TITOLI CON NEON GLOW */
 .h1 {
   @apply text-6xl xl:text-[72px] xl:leading-[80px] tracking-[-1px] font-extrabold;
-  text-shadow: 0 0 10px hsl(var(--primary) / 0.7),
-               0 0 20px hsl(var(--primary) / 0.5);
+  color: white;
+  text-shadow: 
+    0 0 6px hsl(var(--primary) / 0.9),
+    0 0 12px hsl(var(--primary) / 0.7),
+    0 0 18px hsl(var(--primary) / 0.5);
   transition: transform .3s ease, text-shadow .3s ease;
 }
 .h1:hover {
-  transform: scale(1.03);
-  text-shadow: 0 0 15px hsl(var(--secondary)),
-               0 0 30px hsl(var(--secondary) / 0.8);
+  transform: scale(1.05);
+  text-shadow: 
+    0 0 12px hsl(var(--secondary) / 1),
+    0 0 24px hsl(var(--secondary) / 0.9),
+    0 0 36px hsl(var(--secondary) / 0.7);
 }
 
 /* PULSAZIONE LENTA SU ELEMENTI */
 .pulse {
   animation: pulseNeon 3s infinite ease-in-out;
+  color: white;
+  text-shadow: 0 0 8px hsl(var(--accent) / 0.5);
 }
 @keyframes pulseNeon {
   0%, 100% { text-shadow: 0 0 8px hsl(var(--accent) / 0.5); }
@@ -77,13 +88,15 @@
   border-radius: var(--radius);
   font-weight: 700;
   overflow: hidden;
-  box-shadow: 0 0 10px hsl(var(--primary) / 0.4);
+  box-shadow: 0 0 10px hsl(var(--primary) / 0.6);
   transition: transform .2s ease, box-shadow .2s ease;
+  user-select: none;
 }
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 0 20px hsl(var(--primary) / 0.6),
-              0 0 40px hsl(var(--secondary) / 0.5);
+  box-shadow:
+    0 0 20px hsl(var(--primary) / 0.8),
+    0 0 40px hsl(var(--secondary) / 0.7);
 }
 .btn-primary:after {
   content: "";
@@ -96,11 +109,12 @@
   border-radius: 100%;
   transform: translate(-50%, -50%);
   opacity: 0;
+  pointer-events: none;
 }
 .btn-primary:active:after {
   width: 200%;
   height: 200%;
-  opacity: 0;
+  opacity: 0.2;
   transition: width .6s ease, height .6s ease, opacity 1s ease;
 }
 
