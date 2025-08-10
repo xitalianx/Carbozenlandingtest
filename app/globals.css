@@ -4,34 +4,37 @@
 
 @layer base {
   :root {
-    /* Palette pastello */
-    --pastel-blue: 200 70% 85%;
-    --pastel-pink: 340 70% 88%;
-    --pastel-lime: 90 65% 80%;
-    --pastel-peach: 20 70% 85%;
-    --pastel-lavender: 260 55% 85%;
+    /* Palette pastello rivisitata mantenendo nomi variabili */
+    --background: 210 60% 95%;            /* chiaro pastello */
+    --foreground: 220 15% 15%;            /* testo scuro */
+    --card: 0 0% 100%;
+    --card-foreground: 220 15% 15%;
 
-    /* Colori base e primari */
-    --background: 210 60% 95%; /* pastello chiaro */
-    --foreground: 220 15% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 14.3% 4.1%;
 
-    --primary: 210 80% 55%;
-    --primary-foreground: 220 15% 98%;
+    --primary: 210 80% 55%;               /* azzurro pastello */
+    --primary-foreground: 220 15% 98%;   /* bianco per testi su primary */
 
-    --secondary: 340 70% 70%;
-    --secondary-foreground: 340 70% 98%;
+    --secondary: 340 70% 70%;             /* rosa pastello */
+    --secondary-foreground: 340 70% 98%; /* bianco per testi su secondary */
 
-    --tertiary: 90 65% 65%;
+    --tertiary: 90 65% 65%;               /* verde lime pastello */
 
-    --muted: 210 30% 90%;
-    --muted-foreground: 220 10% 40%;
+    --muted: 340 60% 85%;                 /* rosa tenue per elementi secondari */
+    --muted-foreground: 340 70% 60%;     /* testo su muted */
+
+    --accent: 340 70% 70%;                /* colore per animazioni pulse */
+
+    --destructive: 0 84.2% 60.2%;         /* rosso brillante per errori */
+    --destructive-foreground: 60 9.1% 97.8%;
 
     --border: 210 40% 80%;
 
+    --input: 210 40% 80%;
+    --ring: 210 40% 80%;
+    
     --radius: 0.75rem;
-
-    /* Accent per pulse */
-    --accent: 340 70% 70%;
   }
 }
 
@@ -43,14 +46,15 @@
   body {
     @apply text-foreground;
     background: linear-gradient(120deg,
-                hsl(var(--pastel-blue)),
-                hsl(var(--pastel-pink)),
-                hsl(var(--pastel-lime)),
-                hsl(var(--pastel-peach)),
-                hsl(var(--pastel-lavender))
+                hsl(var(--background)),
+                hsl(var(--primary)),
+                hsl(var(--secondary)),
+                hsl(var(--tertiary)),
+                hsl(var(--muted))
               );
     background-size: 400% 400%;
     animation: gradientShift 20s ease infinite;
+    font-family: 'Inter', sans-serif;
   }
 }
 
@@ -100,7 +104,7 @@
   color: hsl(var(--tertiary));
 }
 
-/* Pulsazione lenta */
+/* Animazioni pulse per testi/elementi con classe pulse */
 .pulse {
   animation: pulsePastel 3s infinite ease-in-out;
   color: hsl(var(--accent));
@@ -160,14 +164,15 @@
 /* Section title con decorazione */
 .section-title {
   @apply text-4xl font-bold relative w-max flex items-center justify-between gap-x-3;
+  color: hsl(var(--primary));
 }
 .section-title::before {
   content: "";
   @apply block w-[24px] h-[24px] bg-no-repeat bg-center;
-  background-image: url('/path/to/dots_light.svg'); /* o dots_dark.svg in dark mode */
+  background-image: url('/path/to/dots_light.svg'); /* mantieni il path originale */
 }
 
-/* Floating */
+/* Floating animazione */
 .float {
   animation: floating 5s ease-in-out infinite;
   display: inline-block;
