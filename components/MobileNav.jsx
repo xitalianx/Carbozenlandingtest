@@ -23,7 +23,7 @@ const MobileNav = () => {
             <Nav
               containerStyles='flex flex-col items-center gap-y-6'
               linkStyles='text-2xl text-tertiary'
-              onLinkClick={() => setOpen(false)} 
+              onLinkClick={() => setOpen(false)} // chiude il menu al clic
             />
           </div>
           <Socials containerStyles='flex gap-x-4' iconsStyles='text-2xl text-tertiary' />

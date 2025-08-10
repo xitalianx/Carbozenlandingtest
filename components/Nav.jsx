@@ -21,7 +21,7 @@ const Nav = ({ containerStyles, linkStyles, underlineStyles, onLinkClick }) => {
             href={link.path}
             key={index}
             className={`capitalize ${linkStyles}`}
-            onClick={onLinkClick} 
+            onClick={onLinkClick} // chiude il menu se passato
           >
             {link.path === path && (
               <motion.span
