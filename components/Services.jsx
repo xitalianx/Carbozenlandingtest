@@ -26,7 +26,7 @@ const servicesData = [
 
 const Services = () => {
   return (
-    <section className="mb-12 xl:mb-36 relative">s
+    <section className="mb-12 xl:mb-36 relative">
       <div className="container mx-auto">
         <h2 className="section-title mb-20 xl:mb-20 mt-36 text-center mx-auto text-tertiary">
           Prossimi Step
@@ -59,10 +59,6 @@ const Services = () => {
               {/* Punto desktop */}
               <div className="hidden xl:block absolute -top-14 left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-tertiary border-4 border-secondary-foreground shadow-lg" />
 
-              {/* Linea + punto mobile */}
-              <div className="xl:hidden absolute -left-10 top-8 w-[2px] h-full bg-tertiary">
-                <span className="absolute -left-[9px] top-0 w-5 h-5 rounded-full bg-tertiary border-4 border-secondary-foreground shadow-lg" />
-              </div>
             </motion.div>
           ))}
         </div>
@@ -72,8 +68,6 @@ const Services = () => {
 };
 
 export default Services;
-
-
 
 
 
