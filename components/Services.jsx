@@ -26,9 +26,9 @@ const servicesData = [
 
 const Services = () => {
   return (
-    <section className="mb-12 xl:mb-36 relative">
+    <section className="mb-12 xl:mb-36 relative">s
       <div className="container mx-auto">
-        <h2 className="section-title mb-16 text-center text-tertiary">
+        <h2 className="section-title mb-20 xl:mb-20 mt-36 text-center mx-auto text-tertiary">
           Prossimi Step
         </h2>
 
@@ -48,16 +48,16 @@ const Services = () => {
               transition={{ duration: 0.6, delay: index * 0.2 }}
               viewport={{ once: true }}
               whileHover={{ scale: 1.05 }}
-              className="bg-yellow-400 text-center p-6 rounded-2xl shadow-lg max-w-xs relative z-10 cursor-pointer hover:shadow-2xl transition-shadow duration-300 xl:mx-auto"
+              className="bg-secondary-foreground text-center p-6 rounded-2xl shadow-lg max-w-xs relative z-10 cursor-pointer hover:shadow-2xl transition-shadow duration-300 xl:mx-auto"
             >
               <motion.div
-                className="text-blue-800 mb-4 flex justify-center"
+                className="text-tertiary mb-4 flex justify-center"
                 whileHover={{ rotate: [0, -5, 5, 0], transition: { duration: 0.4 } }}
               >
                 {item.icon}
               </motion.div>
-              <h3 className="text-lg font-bold text-blue-800 mb-2">{item.title}</h3>
-              <p className="text-blue-900 text-sm">{item.description}</p>
+              <h3 className="text-lg font-bold text-tertiary mb-2">{item.title}</h3>
+              <p className="text-tertiary text-sm">{item.description}</p>
 
               {/* Punto desktop */}
               <div className="hidden xl:block absolute -top-14 left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-blue-500 border-4 border-white shadow-lg" />
@@ -75,4 +75,6 @@ const Services = () => {
 };
 
 export default Services;
+
+
 
