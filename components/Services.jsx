@@ -32,9 +32,6 @@ const Services = () => {
           Prossimi Step
         </h2>
 
-        {/* Linea centrale desktop */}
-        <div className="absolute top-[160px] left-0 w-full h-[4px] bg-blue-300 hidden xl:block" />
-
         <div className="flex flex-col xl:flex-row items-start xl:items-center justify-between relative gap-16 xl:gap-0">
           {servicesData.map((item, index) => (
             <motion.div
@@ -45,10 +42,10 @@ const Services = () => {
                 y: 50,
               }}
               whileInView={{ opacity: 1, x: 0, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
+              transition={{ duration: 0.8, delay: index * 0.2 }}
               viewport={{ once: true }}
               whileHover={{ scale: 1.05 }}
-              className="bg-secondary-foreground text-center p-6 rounded-2xl shadow-lg max-w-xs relative z-10 cursor-pointer hover:shadow-2xl transition-shadow duration-300 xl:mx-auto"
+              className="bg-secondary-foreground text-center p-6 rounded-2xl shadow-lg max-w-xs relative z-10 cursor-pointer hover:shadow-2xl transition-shadow duration-600 xl:mx-auto"
             >
               <motion.div
                 className="text-tertiary mb-4 flex justify-center"
@@ -60,11 +57,11 @@ const Services = () => {
               <p className="text-tertiary text-sm">{item.description}</p>
 
               {/* Punto desktop */}
-              <div className="hidden xl:block absolute -top-14 left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-blue-500 border-4 border-white shadow-lg" />
+              <div className="hidden xl:block absolute -top-14 left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-tertiary border-4 border-secondary-foreground shadow-lg" />
 
               {/* Linea + punto mobile */}
-              <div className="xl:hidden absolute -left-10 top-8 w-[2px] h-full bg-blue-300">
-                <span className="absolute -left-[9px] top-0 w-5 h-5 rounded-full bg-blue-500 border-4 border-white shadow-lg" />
+              <div className="xl:hidden absolute -left-10 top-8 w-[2px] h-full bg-tertiary">
+                <span className="absolute -left-[9px] top-0 w-5 h-5 rounded-full bg-tertiary border-4 border-secondary-foreground shadow-lg" />
               </div>
             </motion.div>
           ))}
@@ -75,6 +72,8 @@ const Services = () => {
 };
 
 export default Services;
+
+
 
 
 
