@@ -32,7 +32,7 @@ const Services = () => {
           Prossimi Step
         </h2>
 
-        <div className="flex flex-col xl:flex-row items-start xl:items-center justify-between relative gap-16 xl:gap-0">
+        <div className="flex flex-col xl:flex-row items-center xl:items-center justify-between relative gap-16 xl:gap-0">
           {servicesData.map((item, index) => (
             <motion.div
               key={index}
