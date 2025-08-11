@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "framer-motion";
 import { GanttChartSquare, Blocks, Gem } from "lucide-react";
 
@@ -73,3 +75,4 @@ const Services = () => {
 };
 
 export default Services;
+
