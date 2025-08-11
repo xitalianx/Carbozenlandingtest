@@ -21,10 +21,8 @@ const Hero = () => {
         <div className='flex justify-between gap-x-8'>
           {/* text */}
           <div className='flex max-w-[600px] flex-col justify-center mx-auto xl:mx-0 text-center xl:text-left'>
-            <div className='text-sm uppercase font-semibold mb-4 text-secondary-foreground tracking-[4px]'>
-              CarboZen
-            </div>
-            <h1 className='h1 mb-4 text-secondary-foreground'>Gestisci la glicemia nei pasti, vivi con serenità!</h1>
+            <h1 className='h1 mb-4 text-secondary-foreground'>Gestisci la glicemia nei pasti</h1>
+            <h1 className='h1 mb-4 text-secondary-foreground'>Vivi con serenità!</h1>
             <p className='subtitle2 max-w-[490px] mx-auto xl:mx-0 '>
               Carbozen è la prima app sviluppata per migliorare la vita dei diabetici.
             </p>
@@ -90,3 +88,4 @@ const Hero = () => {
 };
 
 export default Hero;
+
