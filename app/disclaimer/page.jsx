@@ -72,7 +72,7 @@ export default function Disclaimer() {
           </li>
           <li>
             <strong><a
-              href="https://www.siditalia.it/images/pdf/boli_pasto_slide.pdf"
+              href="https://www.siditalia.it/pdf/materiale-didattico/guest/VALENTINI.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="text-tertiary hover:underline"
@@ -82,8 +82,8 @@ export default function Disclaimer() {
             – Materiali didattici per operatori sanitari e pazienti.
           </li>
           <li>
-            <strong>Pratica clinica diabetologica</strong> – Utilizzo quotidiano
-            da parte di diabetologi in Italia e nel mondo.
+            <strong>Pratica clinica diabetologica</strong> – Utilizzo quotidiano,
+            da parte di diabetologi, in Italia e nel mondo.
           </li>
         </ul>
 
@@ -99,6 +99,9 @@ export default function Disclaimer() {
     </div>
   );
 }
+
+}
+
 
 
 
