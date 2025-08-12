@@ -9,7 +9,7 @@ export default function Disclaimer() {
       <div className="max-w-4xl mx-auto space-y-6">
         {/* Introduzione */}
         <p className="text-tertiary text-lg leading-relaxed">
-          <strong>Carbozen</strong> è uno strumento di supporto per le persone
+          <strong>CarboZen</strong> è uno strumento di supporto per le persone
           con diabete, progettato per aiutare a calcolare la dose stimata di
           insulina rapida da assumere prima dei pasti.{" "}
           CarboZen <span className="font-semibold">non è un dispositivo medico</span> e
@@ -99,5 +99,6 @@ export default function Disclaimer() {
     </div>
   );
 }
+
 
 
