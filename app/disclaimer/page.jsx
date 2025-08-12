@@ -1,4 +1,3 @@
-// pages/disclaimer.jsx
 export default function Disclaimer() {
   return (
     <div className="min-h-screen py-10 px-4">
@@ -84,4 +83,5 @@ export default function Disclaimer() {
     </div>
   );
 }
+
 
