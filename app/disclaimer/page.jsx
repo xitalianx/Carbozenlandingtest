@@ -3,29 +3,29 @@ export default function Disclaimer() {
   return (
     <div className="min-h-screen py-10 px-4">
                 {/* Titolo */}
-        <h1 className="h1 text-tertiary mb-6">
+        <h2 className='section-title mb-8 xl:mb-16 mt-36 text-center mx-auto text-tertiary'>
           Disclaimer – Uso di Carbozen
-        </h1>
+        </h2>
       <div className="max-w-4xl mx-auto bg-secondary-foreground shadow-lg rounded-2xl p-8">
         
         {/* Introduzione */}
-        <p className="text-tertiary mb-4">
+        <p className="subtitle4 text-tertiary mb-4">
           <strong>Carbozen</strong> è uno strumento di supporto per le persone
           con diabete, progettato per aiutare a calcolare la dose stimata di
           insulina rapida da assumere prima dei pasti. <span className="font-semibold">Non è un dispositivo medico</span> e non sostituisce in alcun modo la valutazione di un medico o di un diabetologo.
         </p>
 
-        <p className="text-tertiary mb-6">
+        <p className="subtitle4 text-tertiary mb-6">
           L'utente è responsabile dell’uso delle informazioni fornite e deve
           sempre confrontarsi con il proprio team sanitario prima di modificare
           la terapia insulinica.
         </p>
 
         {/* Sezione formula */}
-        <h2 className="h2 texxt-tertiary mb-4">
+        <h3 className="h3 text-tertiary mb-4">
           La formula utilizzata
-        </h2>
-        <p className="text-tertiary mb-4">
+        </h3>
+        <p className="subtitle4 text-tertiary mb-4">
           Carbozen utilizza una formula comunemente adottata nella pratica
           clinica diabetologica internazionale per stimare il <em>bolo
           prandiale</em>. La formula combina:
@@ -43,7 +43,7 @@ export default function Disclaimer() {
         </ul>
 
         <div className="bg-tertiary border-l-4 border-secondary-foreground p-4 rounded-lg mb-6">
-          <p className="text-secondary-foreground">
+          <p className="subtitle4 text-secondary-foreground">
             <strong>Formula:</strong>  
             <br />
             <code className="bg-tertiary px-2 py-1 rounded text-secondary-foreground">
@@ -53,9 +53,9 @@ export default function Disclaimer() {
         </div>
 
         {/* Fonti */}
-        <h2 className="text-2xl font-semibold text-tertiary mb-4">
+        <h3 className="h3 text-tertiary mb-4">
           Fonti e riconoscimento clinico
-        </h2>
+        </h3>
         <p className="text-tertiary mb-4">
           Questa formula è descritta e utilizzata in diversi contesti clinici e
           formativi:
@@ -84,3 +84,4 @@ export default function Disclaimer() {
     </div>
   );
 }
+
