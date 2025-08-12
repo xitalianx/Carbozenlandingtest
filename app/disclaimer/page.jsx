@@ -2,7 +2,7 @@ export default function Disclaimer() {
   return (
     <div className="min-h-screen py-10 px-4">
       {/* Titolo */}
-      <h2 className="section-title mb-8 xl:mb-16 mt-8 text-center mx-auto text-tertiary">
+      <h2 className="section-title mb-5 xl:mb-8 mt-8 text-center mx-auto text-tertiary">
         Disclaimer – T&C
       </h2>
 
@@ -64,7 +64,7 @@ export default function Disclaimer() {
               href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4455388/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-600 hover:underline"
+              className="text-tertiary hover:underline"
             >
               NIH (National Institutes of Health)
             </a></strong>{" "}
@@ -88,7 +88,7 @@ export default function Disclaimer() {
         </ul>
 
         {/* Nota finale */}
-        <div className="bg-secondary-foreground border-l-4 border-yellow-400 p-4 rounded-lg mt-8">
+        <div className="bg-secondary-foreground border-l-4 border-tertiary p-4 rounded-lg mt-8">
           <p className="text-tertiary text-lg leading-relaxed">
             <strong>Nota:</strong> Le informazioni fornite da Carbozen sono a
             scopo educativo e di supporto. Non iniziare, modificare o
