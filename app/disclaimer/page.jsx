@@ -1,3 +1,4 @@
+// pages/disclaimer.jsx
 export default function Disclaimer() {
   return (
     <div className="min-h-screen py-10 px-4">
@@ -5,16 +6,15 @@ export default function Disclaimer() {
         <h2 className='section-title mb-8 xl:mb-16 mt-36 text-center mx-auto text-tertiary'>
           Disclaimer – Uso di Carbozen
         </h2>
-      <div className="max-w-4xl mx-auto bg-secondary-foreground shadow-lg rounded-2xl p-8">
         
         {/* Introduzione */}
-        <p className="subtitle4 text-tertiary mb-4">
+        <p className="text-base text-tertiary mb-4">
           <strong>Carbozen</strong> è uno strumento di supporto per le persone
           con diabete, progettato per aiutare a calcolare la dose stimata di
           insulina rapida da assumere prima dei pasti. <span className="font-semibold">Non è un dispositivo medico</span> e non sostituisce in alcun modo la valutazione di un medico o di un diabetologo.
         </p>
 
-        <p className="subtitle4 text-tertiary mb-6">
+        <p className="text-tertiary mb-6">
           L'utente è responsabile dell’uso delle informazioni fornite e deve
           sempre confrontarsi con il proprio team sanitario prima di modificare
           la terapia insulinica.
@@ -24,7 +24,7 @@ export default function Disclaimer() {
         <h3 className="h3 text-tertiary mb-4">
           La formula utilizzata
         </h3>
-        <p className="subtitle4 text-tertiary mb-4">
+        <p className="text-tertiary mb-4">
           Carbozen utilizza una formula comunemente adottata nella pratica
           clinica diabetologica internazionale per stimare il <em>bolo
           prandiale</em>. La formula combina:
@@ -79,9 +79,12 @@ export default function Disclaimer() {
             senza l’approvazione del proprio medico.
           </p>
         </div>
-      </div>
     </div>
   );
 }
+
+  );
+}
+
 
 
