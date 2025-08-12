@@ -48,7 +48,8 @@ const About = () => {
                       Come nasce CarboZen
                     </h3>
                 <p className='subtitle3 max-w-xl mx-auto xl:mx-0'>
-                  CarboZen nasce da un'esperienza personale, quella di <strong>Giovanni Cerri</strong>, che ha scoperto oltre dieci anni fa di avere il <strong>diabete mellito tipo 1 LADA</strong>. Sin da subito, convivere con la patologia si è rivelato impegnativo, soprattutto quando si trattava di <strong>stimare i carboidrati dei pasti</strong> specialmente fuori casa, e di <strong>calcolare con precisione le unità di insulina</strong> necessarie.
+                  CarboZen nasce da un’esperienza personale.<br />
+                  Oltre dieci anni fa, <strong>Giovanni Cerri</strong> ha scoperto di avere il <strong>diabete mellito di tipo 1 LADA</strong>. Fin da subito, convivere con la patologia si è rivelato impegnativo, soprattutto quando si trattava di <strong>stimare i carboidrati dei pasti</strong> – specialmente fuori casa – e <strong>calcolare con precisione le unità di insulina necessarie.</strong>
                   <br /><br />
                   Gestire l'alimentazione con libertà stava diventando una sfida quotidiana, spesso fonte di frustrazione. Da qui è nata l'esigenza di creare <strong>CarboZen</strong>, <strong>un'app progettata per semplificare la vita di chi convive con il diabete</strong>, offrendo un supporto <strong>concreto</strong>, <strong>veloce</strong> e <strong>affidabile</strong>.
                 </p>
