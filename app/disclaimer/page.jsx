@@ -2,8 +2,8 @@ export default function Disclaimer() {
   return (
     <div className="min-h-screen py-10 px-4">
       {/* Titolo */}
-      <h2 className="section-title mb-8 xl:mb-16 mt-36 text-center mx-auto text-tertiary">
-        Disclaimer – Uso di Carbozen
+      <h2 className="section-title mb-8 xl:mb-16 mt-8 text-center mx-auto text-tertiary">
+        Disclaimer – T&C
       </h2>
 
       <div className="max-w-4xl mx-auto space-y-6">
