@@ -60,25 +60,25 @@ export default function Disclaimer() {
         </p>
         <ul className="list-disc list-inside text-tertiary text-lg space-y-1">
           <li>
-            <a
+            <strong><a
               href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4455388/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-600 hover:underline"
             >
               NIH (National Institutes of Health)
-            </a>{" "}
+            </a></strong>{" "}
             – Linee guida educative per il diabete.
           </li>
           <li>
-            <a
+            <strong><a
               href="https://www.siditalia.it/images/pdf/boli_pasto_slide.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-600 hover:underline"
+              className="text-tertiary hover:underline"
             >
               SID (Società Italiana di Diabetologia)
-            </a>{" "}
+            </a></strong>{" "}
             – Materiali didattici per operatori sanitari e pazienti.
           </li>
           <li>
