@@ -12,28 +12,28 @@ export default function Disclaimer() {
           <strong>Carbozen</strong> è uno strumento di supporto per le persone
           con diabete, progettato per aiutare a calcolare la dose stimata di
           insulina rapida da assumere prima dei pasti.{" "}
-          <span className="font-semibold">Non è un dispositivo medico</span> e
+          CarboZen <span className="font-semibold">non è un dispositivo medico</span> e
           non sostituisce in alcun modo la valutazione di un medico o di un
           diabetologo.
         </p>
 
         <p className="text-tertiary text-lg leading-relaxed">
           L'utente è responsabile dell’uso delle informazioni fornite e deve
-          sempre confrontarsi con il proprio team sanitario prima di modificare
+          sempre confrontarsi con il proprio diabetologo prima di modificare
           la terapia insulinica.
         </p>
 
         {/* Sezione formula */}
         <h3 className="h3 text-tertiary">La formula utilizzata</h3>
         <p className="text-tertiary text-lg leading-relaxed">
-          Carbozen utilizza una formula comunemente adottata nella pratica
+          CarboZen per il calcolo del bolo insulinico utilizza una formula comunemente adottata nella pratica
           clinica diabetologica internazionale per stimare il{" "}
           <em>bolo prandiale</em>. La formula combina:
         </p>
 
         <ul className="list-disc list-inside text-tertiary text-lg space-y-1">
           <li>
-            <strong>I/C (Insulina / Carboidrati):</strong> numero di grammi di
+            <strong>I-C (Rapporto Insulina / Carboidrati):</strong> grammi di
             carboidrati coperti da 1 unità di insulina.
           </li>
           <li>
@@ -47,7 +47,7 @@ export default function Disclaimer() {
             <strong>Formula:</strong>
             <br />
             <code className="bg-tertiary px-2 py-1 rounded text-secondary-foreground text-lg">
-              Dose totale = (Carboidrati / I/C) + ((Glicemia attuale − Glicemia target) / FSI)
+              UI = (Carboidrati / I-C) + ((Glicemia attuale − Glicemia target) / FSI)
             </code>
           </p>
         </div>
@@ -90,7 +90,7 @@ export default function Disclaimer() {
         {/* Nota finale */}
         <div className="bg-secondary-foreground border-l-4 border-tertiary p-4 rounded-lg mt-8">
           <p className="text-tertiary text-lg leading-relaxed">
-            <strong>Nota:</strong> Le informazioni fornite da Carbozen sono a
+            <strong>Nota:</strong> Le informazioni fornite da CarboZen sono a
             scopo educativo e di supporto. Non iniziare, modificare o
             interrompere alcuna terapia senza l’approvazione del proprio medico.
           </p>
@@ -99,5 +99,6 @@ export default function Disclaimer() {
     </div>
   );
 }
+
 
 
