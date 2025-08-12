@@ -8,6 +8,7 @@ const links = [
   { path: '/', name: 'home' },
   { path: '/tutorial', name: 'tutorial' },
   { path: '/contact', name: 'contatti' },
+  { path: '/disclaimer', name: 'disclaimer' },
 ];
 
 const Nav = ({ containerStyles, linkStyles, underlineStyles, onLinkClick }) => {
