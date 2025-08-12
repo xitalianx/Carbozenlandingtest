@@ -1,4 +1,3 @@
-// pages/disclaimer.jsx
 export default function Disclaimer() {
   return (
     <div className="min-h-screen py-10 px-4">
@@ -7,8 +6,8 @@ export default function Disclaimer() {
         Disclaimer – Uso di Carbozen
       </h2>
 
-      {/* Introduzione */}
       <div className="max-w-4xl mx-auto space-y-6">
+        {/* Introduzione */}
         <p className="text-tertiary text-lg leading-relaxed">
           <strong>Carbozen</strong> è uno strumento di supporto per le persone
           con diabete, progettato per aiutare a calcolare la dose stimata di
@@ -25,7 +24,7 @@ export default function Disclaimer() {
         </p>
 
         {/* Sezione formula */}
-        <h3 className="h3 text-tertiary mt-12">La formula utilizzata</h3>
+        <h3 className="h3 text-tertiary">La formula utilizzata</h3>
         <p className="text-tertiary text-lg leading-relaxed">
           Carbozen utilizza una formula comunemente adottata nella pratica
           clinica diabetologica internazionale per stimare il{" "}
@@ -43,34 +42,44 @@ export default function Disclaimer() {
           </li>
         </ul>
 
-        {/* Formula visuale */}
-        <div className="flex flex-col items-center gap-4 mt-6">
-          <span className="text-tertiary font-semibold">UI totali =</span>
-          <div className="flex flex-col md:flex-row items-center gap-4">
-            <div className="bg-secondary-foreground text-tertiary px-4 py-2 rounded-lg shadow">
-              Carboidrati / I/C
-            </div>
-            <span className="text-tertiary font-bold text-xl">+</span>
-            <div className="bg-secondary-foreground text-tertiary px-4 py-2 rounded-lg shadow">
-              (Glicemia attuale − Target) / FSI
-            </div>
-          </div>
+        <div className="bg-tertiary border-l-4 border-secondary-foreground p-4 rounded-lg mb-6">
+          <p className="subtitle4 text-secondary-foreground text-lg">
+            <strong>Formula:</strong>
+            <br />
+            <code className="bg-tertiary px-2 py-1 rounded text-secondary-foreground text-lg">
+              Dose totale = (Carboidrati / I/C) + ((Glicemia attuale − Glicemia target) / FSI)
+            </code>
+          </p>
         </div>
 
         {/* Fonti */}
-        <h3 className="h3 text-tertiary mt-12">Fonti e riconoscimento clinico</h3>
+        <h3 className="h3 text-tertiary">Fonti e riconoscimento clinico</h3>
         <p className="text-tertiary text-lg leading-relaxed">
           Questa formula è descritta e utilizzata in diversi contesti clinici e
           formativi:
         </p>
         <ul className="list-disc list-inside text-tertiary text-lg space-y-1">
           <li>
-            <strong>NIH (National Institutes of Health)</strong> – Linee guida
-            educative per il diabete.
+            <a
+              href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4455388/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:underline"
+            >
+              NIH (National Institutes of Health)
+            </a>{" "}
+            – Linee guida educative per il diabete.
           </li>
           <li>
-            <strong>SID (Società Italiana di Diabetologia)</strong> – Materiali
-            didattici per operatori sanitari e pazienti.
+            <a
+              href="https://www.siditalia.it/images/pdf/boli_pasto_slide.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:underline"
+            >
+              SID (Società Italiana di Diabetologia)
+            </a>{" "}
+            – Materiali didattici per operatori sanitari e pazienti.
           </li>
           <li>
             <strong>Pratica clinica diabetologica</strong> – Utilizzo quotidiano
