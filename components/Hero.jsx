@@ -16,7 +16,8 @@ import DevImg from './DevImg';
 import Badge from './Badge';
 import Socials from './Socials';
 
-import { useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
 import { Renderer, Program, Mesh, Color, Triangle } from 'ogl';
 
 const Hero = () => {
@@ -249,7 +250,6 @@ const Hero = () => {
 };
 
 export default Hero;
-
 
 
 
