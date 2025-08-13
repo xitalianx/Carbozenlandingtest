@@ -36,7 +36,7 @@ function BlurText({ text, className, delay = 0.15 }) {
           animate={isVisible ? { filter: "blur(0px)", opacity: 1, y: 0 } : {}}
           transition={{
             delay: i * delay,
-            duration: 0.5,
+            duration: 1,
             ease: "easeOut",
           }}
           style={{ display: "inline-block", marginRight: "0.25em" }}
@@ -126,4 +126,5 @@ const Hero = () => {
 };
 
 export default Hero;
+
 
