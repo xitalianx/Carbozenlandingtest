@@ -21,6 +21,35 @@ import { Renderer, Program, Mesh, Color, Triangle } from 'ogl';
 
 const Hero = () => {
 
+  // Componente per il testo con effetto blur
+  function BlurText({ text, className, delay = 0.15 }) {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
+  return (
+    <span className={className}>
+      {text.split(" ").map((word, i) => (
+        <motion.span
+          key={i}
+          initial={{ filter: "blur(8px)", opacity: 0, y: 20 }}
+          animate={isVisible ? { filter: "blur(0px)", opacity: 1, y: 0 } : {}}
+          transition={{
+            delay: i * delay,
+            duration: 0.9,
+            ease: "easeOut",
+          }}
+          style={{ display: "inline-block", marginRight: "0.25em" }}
+        >
+          {word}
+        </motion.span>
+      ))}
+    </span>
+  );
+}
+
   const iridescenceRef = useRef(null);
 
   useEffect(() => {
@@ -129,6 +158,8 @@ const Hero = () => {
     }
     ctn.addEventListener("mousemove", handleMouseMove);
 
+    
+
     return () => {
       cancelAnimationFrame(animateId);
       window.removeEventListener("resize", resize);
@@ -137,6 +168,8 @@ const Hero = () => {
       gl.getExtension("WEBGL_lose_context")?.loseContext();
     };
   }, []);
+
+  
 
   return (
     <section className='py-12 xl:py-24 h-[84vh] xl:pt-28 bg-no-repeat bg-bottom bg-cover dark:bg-none relative'>
@@ -148,7 +181,11 @@ const Hero = () => {
         <div className='flex justify-between gap-x-8'>
           {/* text */}
           <div className='flex max-w-[600px] flex-col justify-center mx-auto xl:mx-0 text-center xl:text-left'>
-            <h1 className='h1 mb-4 text-secondary-foreground'>Gestisci la glicemia nei pasti, vivi con serenità!</h1>
+              <BlurText
+              text="Gestisci la glicemia nei pasti, vivi con serenità!"
+              className="h1 mb-4 text-secondary-foreground"
+              delay={0.15}
+            />
             <p className='subtitle4 max-w-[490px] mx-auto xl:mx-0 '>
               <b>
               Carbozen è la prima app sviluppata per migliorare la vita dei diabetici.
@@ -212,6 +249,11 @@ const Hero = () => {
 };
 
 export default Hero;
+
+
+
+export default Hero;
+
 
 
 
