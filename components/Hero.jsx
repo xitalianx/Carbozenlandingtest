@@ -1,3 +1,5 @@
+"use client";
+
 import Link from 'next/link';
 import { Button } from './ui/button';
 import { Download, Send } from 'lucide-react';
@@ -210,5 +212,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
-
