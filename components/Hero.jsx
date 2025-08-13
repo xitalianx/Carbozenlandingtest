@@ -33,9 +33,7 @@ const Hero = () => {
     const vertexShader = `
     attribute vec2 uv;
     attribute vec2 position;
-
     varying vec2 vUv;
-
     void main() {
       vUv = uv;
       gl_Position = vec4(position, 0, 1);
@@ -44,22 +42,17 @@ const Hero = () => {
 
     const fragmentShader = `
     precision highp float;
-
     uniform float uTime;
     uniform vec3 uColor;
     uniform vec3 uResolution;
     uniform vec2 uMouse;
     uniform float uAmplitude;
     uniform float uSpeed;
-
     varying vec2 vUv;
-
     void main() {
       float mr = min(uResolution.x, uResolution.y);
       vec2 uv = (vUv.xy * 2.0 - 1.0) * uResolution.xy / mr;
-
       uv += (uMouse - vec2(0.5)) * uAmplitude;
-
       float d = -uTime * 0.5 * uSpeed;
       float a = 0.0;
       for (float i = 0.0; i < 8.0; ++i) {
@@ -95,7 +88,7 @@ const Hero = () => {
       fragment: fragmentShader,
       uniforms: {
         uTime: { value: 0 },
-        uColor: { value: new Color(0.2, 0.565, 0.702) }, // colore #3390B3
+        uColor: { value: new Color(0.2, 0.565, 0.702) }, // colore simile a #3390B3
         uResolution: {
           value: new Color(
             gl.canvas.width,
@@ -141,8 +134,19 @@ const Hero = () => {
   return (
     <section className='py-12 xl:py-24 h-[84vh] xl:pt-28 bg-no-repeat bg-bottom bg-cover dark:bg-none relative'>
       
-      {/* Iridescence Background */}
-      <div ref={iridescenceRef} className="absolute inset-0 z-0"></div>
+      {/* Iridescence Background limitata alla forma */}
+      <div
+        ref={iridescenceRef}
+        className="absolute -top-1 -right-2 w-[510px] h-[462px] z-0"
+        style={{
+          WebkitMaskImage: "url('/hero/hero-bg.png')",
+          WebkitMaskRepeat: "no-repeat",
+          WebkitMaskSize: "cover",
+          maskImage: "url('/hero/hero-bg.png')",
+          maskRepeat: "no-repeat",
+          maskSize: "cover",
+        }}
+      ></div>
 
       <div className='container mx-auto relative z-10'>
         <div className='flex justify-between gap-x-8'>
@@ -169,11 +173,6 @@ const Hero = () => {
                 </Button>
               </Link>
             </div>
-            {/* socials */}
-           {/* <Socials
-              containerStyles='flex gap-x-6 mx-auto xl:mx-0'
-              iconsStyles='text-secondary-foreground text-[22px] hover:text-primary transition-all'
-            />*/}
           </div>
           {/* image */}
           <div className='hidden xl:flex relative'>
@@ -199,7 +198,6 @@ const Hero = () => {
               endCountNum={0}
               badgeText='Pensieri'
             />
-            <div className='bg-hero_shape2_light dark:bg-hero_shape2_dark w-[500px] h-[500px] bg-no-repeat absolute -top-1 -right-2'></div>
             <DevImg
               containerStyles='bg-hero_shape w-[510px] h-[462px] bg-no-repeat relative bg-bottom'
               imgSrc='/hero/developer.png'
