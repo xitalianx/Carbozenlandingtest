@@ -16,8 +16,8 @@ import Badge from './Badge';
 import Socials from './Socials';
 
 // framer-motion
-import { motion } from 'framer-motion';
-import { useEffect, useState } from 'react';
+import { motion, useMotionValue, useTransform } from 'framer-motion';
+import { useEffect, useState, useRef } from 'react';
 
 // Componente per il testo con effetto blur
 function BlurText({ text, className, delay = 0.15 }) {
@@ -36,7 +36,7 @@ function BlurText({ text, className, delay = 0.15 }) {
           animate={isVisible ? { filter: "blur(0px)", opacity: 1, y: 0 } : {}}
           transition={{
             delay: i * delay,
-            duration: 1,
+            duration: 0.9,
             ease: "easeOut",
           }}
           style={{ display: "inline-block", marginRight: "0.25em" }}
@@ -48,6 +48,40 @@ function BlurText({ text, className, delay = 0.15 }) {
   );
 }
 
+// Wrapper per effetto proximity al passaggio del mouse
+function ProximityWrapper({ children }) {
+  const ref = useRef(null);
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
+
+  const scale = useTransform([mouseX, mouseY], ([x, y]) => {
+    const dx = x / (ref.current?.offsetWidth || 1) - 0.5;
+    const dy = y / (ref.current?.offsetHeight || 1) - 0.5;
+    const dist = Math.sqrt(dx * dx + dy * dy);
+    return 1 + (0.2 * (1 - Math.min(dist * 2, 1))); // scala tra 1 e 1.2
+  });
+
+  return (
+    <div
+      ref={ref}
+      onMouseMove={(e) => {
+        const rect = ref.current.getBoundingClientRect();
+        mouseX.set(e.clientX - rect.left);
+        mouseY.set(e.clientY - rect.top);
+      }}
+      onMouseLeave={() => {
+        mouseX.set(ref.current.offsetWidth / 2);
+        mouseY.set(ref.current.offsetHeight / 2);
+      }}
+      style={{ display: "inline-block" }}
+    >
+      <motion.div style={{ scale }}>
+        {children}
+      </motion.div>
+    </div>
+  );
+}
+
 const Hero = () => {
   return (
     <section className='py-12 xl:py-24 h-[84vh] xl:pt-28 bg-hero bg-no-repeat bg-bottom bg-cover dark:bg-none'>
@@ -56,11 +90,13 @@ const Hero = () => {
           {/* text */}
           <div className='flex max-w-[600px] flex-col justify-center mx-auto xl:mx-0 text-center xl:text-left'>
             
-            <BlurText
-              text="Gestisci la glicemia nei pasti, vivi con serenità!"
-              className="h1 mb-4 text-secondary-foreground"
-              delay={0.15}
-            />
+            <ProximityWrapper>
+              <BlurText
+                text="Gestisci la glicemia nei pasti, vivi con serenità!"
+                className="h1 mb-4 text-secondary-foreground"
+                delay={0.15}
+              />
+            </ProximityWrapper>
 
             <p className='subtitle4 max-w-[490px] mx-auto xl:mx-0 '>
               <b>
