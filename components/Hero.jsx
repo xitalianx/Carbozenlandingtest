@@ -1,7 +1,8 @@
+"use client";
+
 import Link from 'next/link';
 import { Button } from './ui/button';
 import { Download, Send } from 'lucide-react';
-
 import {
   RiTimerFill,
   RiEmotionFill,
@@ -14,6 +15,39 @@ import DevImg from './DevImg';
 import Badge from './Badge';
 import Socials from './Socials';
 
+// framer-motion
+import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
+
+// Componente per il testo con effetto blur
+function BlurText({ text, className, delay = 0.15 }) {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
+  return (
+    <span className={className}>
+      {text.split(" ").map((word, i) => (
+        <motion.span
+          key={i}
+          initial={{ filter: "blur(8px)", opacity: 0, y: 20 }}
+          animate={isVisible ? { filter: "blur(0px)", opacity: 1, y: 0 } : {}}
+          transition={{
+            delay: i * delay,
+            duration: 0.5,
+            ease: "easeOut",
+          }}
+          style={{ display: "inline-block", marginRight: "0.25em" }}
+        >
+          {word}
+        </motion.span>
+      ))}
+    </span>
+  );
+}
+
 const Hero = () => {
   return (
     <section className='py-12 xl:py-24 h-[84vh] xl:pt-28 bg-hero bg-no-repeat bg-bottom bg-cover dark:bg-none'>
@@ -21,10 +55,16 @@ const Hero = () => {
         <div className='flex justify-between gap-x-8'>
           {/* text */}
           <div className='flex max-w-[600px] flex-col justify-center mx-auto xl:mx-0 text-center xl:text-left'>
-            <h1 className='h1 mb-4 text-secondary-foreground'>Gestisci la glicemia nei pasti, vivi con serenità!</h1>
+            
+            <BlurText
+              text="Gestisci la glicemia nei pasti, vivi con serenità!"
+              className="h1 mb-4 text-secondary-foreground"
+              delay={0.15}
+            />
+
             <p className='subtitle4 max-w-[490px] mx-auto xl:mx-0 '>
               <b>
-              Carbozen è la prima app sviluppata per migliorare la vita dei diabetici.
+                Carbozen è la prima app sviluppata per migliorare la vita dei diabetici.
               </b>
             </p>
             <div className='flex flex-col gap-y-3 md:flex-row gap-x-3 items-center mx-auto xl:mx-0 mb-12'>
@@ -43,11 +83,12 @@ const Hero = () => {
               </Link>
             </div>
             {/* socials */}
-           {/* <Socials
+            {/* <Socials
               containerStyles='flex gap-x-6 mx-auto xl:mx-0'
               iconsStyles='text-secondary-foreground text-[22px] hover:text-primary transition-all'
-            />*/}
+            /> */}
           </div>
+
           {/* image */}
           <div className='hidden xl:flex relative'>
             {/* badge 1 */}
@@ -85,3 +126,4 @@ const Hero = () => {
 };
 
 export default Hero;
+
