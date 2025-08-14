@@ -194,17 +194,17 @@ const Hero = () => {
             </p>
             <div className='flex flex-col md:flex-row gap-x-3 items-center mx-auto xl:mx-0 mb-12'>
               <Link href='/tutorial'>
-                <Button className='text-tertiary gap-x-2'>
+                <Button className='text-tertiary gap-x-2 mb-[17px] md:mb-0'>
                   Scopri di più
                 </Button>
               </Link>
 
-              <p className='subtitle2 my-2 md:my-0'>
+              <p className='subtitle2 m-0'>
                 oppure
               </p>
 
               <Link href='https://app.carbozen.it'>
-                <Button className='text-tertiary gap-x-2'>
+                <Button className='text-tertiary gap-x-2 mt-[17px] md:mt-0'>
                   Inizia subito!
                 </Button>
               </Link>
@@ -252,5 +252,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
-
