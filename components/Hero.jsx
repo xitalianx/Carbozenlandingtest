@@ -199,7 +199,7 @@ const Hero = () => {
                 </Button>
               </Link>
 
-              <p className='subtitle2 flex items-center h-10 my-4 md:my-0'>
+              <p className='subtitle2 my-2 md:my-0'>
                 oppure
               </p>
 
@@ -252,8 +252,5 @@ const Hero = () => {
 };
 
 export default Hero;
-
-
-
 
 
