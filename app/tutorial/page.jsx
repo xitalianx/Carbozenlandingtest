@@ -12,35 +12,35 @@ import {
 const servicesData = [
   {
     icon: <GanttChartSquare size={72} strokeWidth={0.8} />,
-    title: 'STEP 1: Registrati o accedi',
+    title: 'Registrati o accedi',
     image: '/tutorial/img1.jpg',
     description:
-      'Registrati con la tua mail e rispondi alle semplici domande di registrazione. Se sei già iscritto, accedi direttamente.',
+      'Registrati con la tua mail, inserisci i parametri e rispondi alle semplici domande di registrazione. Se sei già iscritto, accedi direttamente.',
   },
   {
     icon: <Blocks size={72} strokeWidth={0.8} />,
-    title: 'STEP 2: Fai una foto',
+    title: 'Fai una foto',
     image: '/tutorial/img2.jpg',
     description:
       "Fotografa il piatto di cui vuoi stimare i carboidrati e attendi finchè l'analisi è completata.",
   },
   {
     icon: <Gem size={72} strokeWidth={0.8} />,
-    title: 'STEP 3: Inserisci la tua glicemia attuale',
+    title: 'Inserisci la tua glicemia attuale',
     image: '/tutorial/img3.jpg',
     description:
       "Inserisci la tua glicemia attuale nel riquadro dopo aver calcolato i carboidrati del pasto.",
   },
     {
     icon: <Gem size={72} strokeWidth={0.8} />,
-    title: 'STEP 4: Calcola le unità insuliniche',
+    title: 'Calcola le unità insuliniche',
     image: '/tutorial/img4.jpg',
     description:
         "Clicca sul bottone per calcolare quante unità insuliniche ti servono.",
     },
         {
     icon: <Gem size={72} strokeWidth={0.8} />,
-    title: 'STEP 5: Gusta il tuo pasto',
+    title: 'Gusta il tuo pasto',
     image: '/tutorial/img5.jpg',
     description:
         "Goditi il tuo pasto senza preoccupazioni!",
@@ -97,4 +97,3 @@ const Tutorial = () => {
 };
 
 export default Tutorial;
-
