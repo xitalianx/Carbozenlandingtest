@@ -192,7 +192,7 @@ const Hero = () => {
               Carbozen è la prima app sviluppata per migliorare la vita dei diabetici.
               </b>
             </p>
-            <div className='flex flex-col gap-y-3 md:flex-row gap-x-3 items-center mx-auto xl:mx-0 mb-12'>
+            <div className='flex flex-col gap-y-2 md:flex-row gap-x-3 items-center mx-auto xl:mx-0 mb-12'>
               <Link href='/tutorial'>
                 <Button className='text-tertiary gap-x-2'>
                   Scopri di più
@@ -250,6 +250,9 @@ const Hero = () => {
 };
 
 export default Hero;
+
+
+
 
 
 
